@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MPage.master.cs" Inherits="StatsBet.MPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300" />-->
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="estilo1.css">
+    <script src="javascript.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!--BTN drop (inicio)-->
+
+        <div style="display: none;">
+            <div class="btn-menu-beto">menu</div>
+            <div class="drop-menu-beto">
+                <a href="https://www.google.com" class="btn-drop-beto">Profile</a>
+                <a href="#" class="btn-drop-beto">Pictures</a>
+                <a href="#" class="btn-drop-beto">Log out</a>
+            </div>
+        </div>
+
+        <!--BTN drop (fim)-->
+
+      <!-- Inicio da navbar -->
+        <nav class="nav-main">
+
+            <div class="logo">statsbet</div>
+
+
+            <div style="float: left;">
+            <div class="btn-menu-beto">Apostas</div>
+            <div class="drop-menu-beto">
+                <a href="Futebol.aspx" class="btn-drop-beto">Futebol</a>
+                <a href="#" class="btn-drop-beto">Futsal</a>
+            </div>
+        </div>
+             
+            <div style="float: left;">
+            <div class="btn-menu-beto">Estatísticas</div>
+            <div class="drop-menu-beto">
+                <a href="#" class="btn-drop-beto">Futebol</a>
+                <a href="#" class="btn-drop-beto">Futsal</a>
+            </div>
+        </div>
+            
+
+
+              <!-- login popup code  -->
+            <dd  style="float:right;">
+                
+                    <a id="Login_teste" runat="server" href="#modal" class="nav-item moda-open " >Entrar</a>
+                    
+                
+                   
+        <div class="modal" id="modal">
+        <div class="modal-content";>
+            <a href="#" class="modal-close">&times;</a>
+            
+            <h2 class="modal-heading">login</h2>
+            <p class="modal-p">Username</p> 
+           <asp:TextBox ID="TextBox_User" runat="server"></asp:TextBox>
+            <br />
+            <p class="modal-p">Password</p> 
+             <asp:TextBox ID="TextBox_Pw" runat="server" TextMode="Password"></asp:TextBox>
+            <br />
+
+            <asp:Button ID="Button_Log" runat="server" Text="Login" Onclick="Button_Log_Click"/>
+            
+    
+         </div>
+    </div>
+
+                </dd> 
+            <!-- fim do popup-->
+
+
+             <dd  style="float:right;" >
+                 
+                     <a id="Regist_teste" runat="server" href="RegistoUtilizador.aspx" class="nav-item">Registar</a>
+                
+                 <!--<asp:Button ID="Button_Reg" runat="server" Text="Registar" OnClick="Button_Reg_Click" />-->
+                   
+                </dd>
+               
+        <div style="float: right;">
+            <div id="lbl_perfil" runat="server" class="btn-menu-beto" style="width:auto; visible=false">
+                <asp:Label id="Label1" runat="server" Text="" Visible="false"></asp:Label></div>
+            <div class="drop-menu-beto">
+                <a href="Perfil.aspx" class="btn-drop-beto"> Perfil </a>
+                <a href="Logout.aspx" class="btn-drop-beto"> Log Out </a>
+                <a href="#" class="btn-drop-beto" id="but_gerir" visible=false> Gerir Membros </a>
+            </div>
+        </div>
+        </nav>
+    <!-- fim da navbar -->
+
+
+    <div class="content">
+
+
+    </div>
+
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder> 
+        </form>
+   
+        
+    
+</body>
+</html>
